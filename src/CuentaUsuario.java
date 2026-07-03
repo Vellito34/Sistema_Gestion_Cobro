@@ -18,8 +18,8 @@ public abstract class CuentaUsuario {
     @Override
     public String toString() {
         return "Datos de Usuario" +
-                "\nCorreo='" + correo + '\n' +
-                "Mese Activo=" + meseActivo +
+                "\nCorreo: " + correo + '\n' +
+                "Mese Activo: " + meseActivo +
                 "\nPlan: " + tipoPlan +
                 "\nTotal a pagar: " + tipoPlan.calcularCosto(this.meseActivo);
     }
