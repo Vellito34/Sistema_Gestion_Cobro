@@ -12,9 +12,17 @@ public abstract class CuentaUsuario {
     }
 
     public void TotalAPagar(){
-        System.out.println(tipoPlan);
+        System.out.println(tipoPlan.calcularCosto(this.meseActivo));
     }
 
+    @Override
+    public String toString() {
+        return "Datos de Usuario" +
+                "\nCorreo='" + correo + '\n' +
+                "Mese Activo=" + meseActivo +
+                "\nPlan: " + tipoPlan +
+                "\nTotal a pagar: " + tipoPlan.calcularCosto(this.meseActivo);
+    }
 
     public String getCorreo() {
         return correo;
