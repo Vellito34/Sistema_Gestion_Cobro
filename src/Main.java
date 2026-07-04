@@ -10,7 +10,7 @@ public class Main {
 
 
         Scanner sc = new Scanner(System.in);
-        int opc, suscripcion;
+        int opc, suscripcion, meses;
         boolean repetir = true;
         String correo;
         PlataformaStreaming plataformaStreaming = new PlataformaStreaming();
@@ -46,12 +46,48 @@ public class Main {
                                 "primera factura \nPermite habilitar acceso a contenido 4K Ultra HD y audio espacial");
                         suscripcion = sc.nextInt();
 
-                        switch (suscripcion){}
+                        switch (suscripcion){
+                            case 1:
+                                System.out.println("Ingresar los meses de suscripcion:");
+                                meses = sc.nextInt();
+                                plataformaStreaming.AgregarUsuario(new UsuarioBasico(correo, meses, new PlanBasico()));
+                                break;
 
+                            case 2:
+                                System.out.println("Ingresar los meses de suscripcion:");
+                                meses = sc.nextInt();
+                                plataformaStreaming.AgregarUsuario(new UsuarioEstandar(correo, meses, new PlanBasico()));
+                                break;
 
+                            case 3:
+                                System.out.println("Ingresar los meses de suscripcion:");
+                                meses = sc.nextInt();
+                                plataformaStreaming.AgregarUsuario(new UsuarioPremium(correo, meses, new PlanBasico()));
+                                break;
+
+                            default:
+                                System.out.println("-------------------------------------------");
+                                System.out.println("Error: Opcion invalida, intentelo de nuevo");
+                                System.out.println("-------------------------------------------");
+                                break;
+                        }
                         break;
+
                     case 2:
                         plataformaStreaming.ReporteUsuarios();
+                        break;
+
+                    case 3:
+                        System.out.println("--------------------");
+                        System.out.println("Cerrando sistema");
+                        System.out.println("--------------------");
+                        break;
+
+                    default:
+                        System.out.println("-------------------------------------------");
+                        System.out.println("Error: Opcion invalida, intentelo de nuevo");
+                        System.out.println("-------------------------------------------");
+                        break;
 
                 }
 
