@@ -50,19 +50,19 @@ public class Main {
                             case 1:
                                 System.out.println("Ingresar los meses de suscripcion:");
                                 meses = sc.nextInt();
-                                plataformaStreaming.AgregarUsuario(new UsuarioBasico(correo, meses, new PlanBasico()));
+                                plataformaStreaming.AgregarUsuario(new UsuarioBasico(correo, meses));
                                 break;
 
                             case 2:
                                 System.out.println("Ingresar los meses de suscripcion:");
                                 meses = sc.nextInt();
-                                plataformaStreaming.AgregarUsuario(new UsuarioEstandar(correo, meses, new PlanBasico()));
+                                plataformaStreaming.AgregarUsuario(new UsuarioEstandar(correo, meses));
                                 break;
 
                             case 3:
                                 System.out.println("Ingresar los meses de suscripcion:");
                                 meses = sc.nextInt();
-                                plataformaStreaming.AgregarUsuario(new UsuarioPremium(correo, meses, new PlanBasico()));
+                                plataformaStreaming.AgregarUsuario(new UsuarioPremium(correo, meses));
                                 break;
 
                             default:
