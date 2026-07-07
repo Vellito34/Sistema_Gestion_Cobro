@@ -81,6 +81,7 @@ public class Main {
                         System.out.println("--------------------");
                         System.out.println("Cerrando sistema");
                         System.out.println("--------------------");
+                        repetir = false;
                         break;
 
                     default:
